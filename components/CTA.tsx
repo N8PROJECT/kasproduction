@@ -9,15 +9,23 @@ export default function CTA() {
         Let&apos;s Build Your Next Event
       </h2>
       <p data-reveal style={delay(100)}>
-        Tell us what your event needs. Our team will help you plan the right production setup, equipment, and
-        technical support.
+        Tell us what your event needs. Our team will help you plan the right
+        production setup, equipment, and technical support.
       </p>
       <div className="acts" data-reveal style={delay(200)}>
-        <a className="btn white" href={`mailto:${site.email}?subject=Quote%20Request`}>
+        <a
+          className="btn white"
+          href={`https://wa.me/6281234567890?text=Halo%20${encodeURIComponent(site.name)},%20saya%20ingin%20request%20quote%20untuk%20event.`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Request a Quote <Arrow />
         </a>
-        <a className="btn black" href={`mailto:${site.email}?subject=Talk%20to%20${encodeURIComponent(site.name)}`}>
-          Talk to Our Team
+        <a
+          className="btn black"
+          href={`tel:${site.phone.replace(/[^0-9+]/g, "")}`}
+        >
+          Call {site.phone}
         </a>
       </div>
     </section>
