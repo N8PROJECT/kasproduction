@@ -20,7 +20,12 @@ export default function Footer() {
           <div data-reveal>
             <Logo />
             <p className="tag">{site.tagline}</p>
-            <a className="ig" href={site.instagram} target="_blank" rel="noopener noreferrer">
+            <a
+              className="ig"
+              href={site.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Instagram /> {site.instagramHandle}
             </a>
           </div>
@@ -48,10 +53,9 @@ export default function Footer() {
             <h4>Contact</h4>
             <ul>
               <li>
-                <a href={`mailto:${site.email}`}>{site.email}</a>
-              </li>
-              <li>
-                <a href={site.phoneHref}>{site.phone}</a>
+                <a href={`tel:${site.phone.replace(/[^0-9+]/g, "")}`}>
+                  {site.phone}
+                </a>
               </li>
               <li className="tag" style={{ margin: 0 }}>
                 {site.location}
